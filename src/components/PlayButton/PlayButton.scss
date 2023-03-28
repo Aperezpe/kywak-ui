@@ -1,0 +1,58 @@
+@import '../../css/variables';
+
+.play-button {
+  position: relative;
+  height: 9rem;
+  width: 9rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: transparent;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 0px 5000px $color-primary;
+    transform: translate(-80%, -50%) rotate(45deg) skew(-5deg, -5deg);
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__middle-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5rem;
+    transform: translateX(-30%);
+    height: 9rem;
+    background-color: $color-primary;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $color-primary;
+      top: 50%;
+      left: 100%;
+      transform: translate(-50%, -50%) rotate(45deg) skew(-5deg, -5deg);;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &:hover::after {
+    transition: box-shadow .2s ease-out;
+    box-shadow: 0px 0px 0px 5000px gray;
+  }
+  
+  &:hover &__middle-fill {
+    transition: background-color .2s ease-out;
+    background-color: gray;
+  }
+  
+  &:hover &__middle-fill::after {
+    transition: background-color .2s ease-out;
+    background-color: gray;
+  }
+
+}

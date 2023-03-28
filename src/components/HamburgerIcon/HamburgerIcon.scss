@@ -1,0 +1,30 @@
+@import '../../css/variables';
+
+$hamburger-icon-width: 3rem;
+$hamburger-icon-height: 4px;
+$hamburger-icon-gap: 1rem;
+
+.hamburger-icon {
+  width: $hamburger-icon-width;
+  height: $hamburger-icon-height;
+  background-color: $text-color-primary;
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: -$hamburger-icon-gap;
+    width: $hamburger-icon-width;
+    height: $hamburger-icon-height;
+    background-color: $text-color-primary;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: $hamburger-icon-gap;
+    width: $hamburger-icon-width;
+    height: $hamburger-icon-height;
+    background-color: $text-color-primary;
+  }
+}
