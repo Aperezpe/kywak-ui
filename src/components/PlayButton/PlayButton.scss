@@ -7,7 +7,7 @@
   margin: 0 auto;
   overflow: hidden;
   background-color: transparent;
-
+  
   &::after {
     content: '';
     position: absolute;
@@ -15,10 +15,11 @@
     left: 50%;
     box-shadow: 0px 0px 0px 5000px $color-primary;
     transform: translate(-80%, -50%) rotate(45deg) skew(-5deg, -5deg);
+    background-color: transparent;
     width: 5rem;
     height: 5rem;
   }
-
+  
   &__middle-fill {
     position: absolute;
     left: 0;
@@ -27,7 +28,7 @@
     transform: translateX(-30%);
     height: 9rem;
     background-color: $color-primary;
-
+    
     &::after {
       content: "";
       position: absolute;
