@@ -1,0 +1,55 @@
+@import '../../css/variables';
+
+$hamburger-menu-width: 3rem;
+$hamburger-line-height: 4px;
+$hamburger-menu-gap: 1rem;
+$transition-duration: .3s;
+
+.hamburger-menu {
+  width: $hamburger-menu-width;
+  height: $hamburger-line-height;
+  background-color: $text-color-primary;
+  position: relative;
+  transition: all .1s ease-in;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: -$hamburger-menu-gap;
+    width: $hamburger-menu-width;
+    height: $hamburger-line-height;
+    transition: transform $transition-duration ease-in;
+    background-color: $text-color-primary;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: $hamburger-menu-gap;
+    width: $hamburger-menu-width;
+    transition: transform $transition-duration ease-in;
+    height: $hamburger-line-height;
+    background-color: $text-color-primary;
+  }
+  
+  &--checked {
+    background-color: transparent;
+    transition: all .1s ease-in;
+    
+    
+    &::before {
+      content: "";
+      transform: translateY(1rem) rotate(225deg) scaleX(1.1);
+      transition: transform $transition-duration ease-in;
+      transform-origin: center;
+    }
+    
+    &::after {
+      content: "";
+      transform: translateY(-1rem) rotate(-225deg) scaleX(1.1);
+      transition: transform $transition-duration ease-in;
+      transform-origin: center;
+    }
+  }
+
+}

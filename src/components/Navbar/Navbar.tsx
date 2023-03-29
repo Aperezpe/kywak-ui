@@ -1,14 +1,14 @@
 import React from 'react'
 import KywakLogo from '../KywakLogo/KywakLogo';
-import HamburgerIcon from '../HamburgerIcon/HamburgerIcon';
+import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
 type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <div className='absolute flex justify-between p-10 items-center h-36 w-screen'>
+    <div className='absolute flex justify-between p-10 items-center h-36 w-screen z-50'>
       <KywakLogo />
-      <HamburgerIcon />
+      <HamburgerMenu />
     </div>
   )
 }
