@@ -19,13 +19,13 @@ const Button: React.FC<Props> = ({ outline, ...rest }) => {
       text-xl 
       uppercase 
       tracking-widest 
+      border-[var(--color-tertiary)]
       font-medium
       drop-shadow
       ${className}
     `, {
     'bg-transparent': outline,
     'text-[var(--color-tertiaty)]': outline,
-    'border-[var(--color-tertiaty)]': outline,
 
   })
 
